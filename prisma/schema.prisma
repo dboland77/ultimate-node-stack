@@ -16,10 +16,10 @@ model Post {
   slug String @unique
   title String 
   content String?
-  publishedAt DateTime?
+  publishedAt DateTime? 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
 @@map(name: "posts")
+@@index([publishedAt])
 }
-  
